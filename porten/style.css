@@ -108,8 +108,29 @@ header .info .contacts-dropdown {
     font-size: 12px;
 }
 
+header .info .contacts-dropdown:hover + .mobile-contacts {
+    opacity: 1;
+}
+
 header .info .mobile-contacts {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: #000000;
+    z-index: 10;
+    transition: .3s;
+}
+
+
+header .info .mobile-contacts ul {
+    list-style-type: none;
+}
+
+header .info .mobile-contacts ul li {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ffffff;
 }
 
 header .info .contacts {
@@ -130,6 +151,7 @@ header .info .contacts span {
 
 header .info .contacts .line {
     margin: 0 9px;
+    background: none;
 }
 
 header .info .auth {
@@ -181,7 +203,23 @@ header .navigation .hamburger {
 }
 
 header .navigation .hamburger div {
-    height: 1px;
+    transition: .3s;  
+}
+
+header .navigation .hamburger.open div:nth-child(1) {
+    transform: rotate(45deg) translateY(15px);
+}
+
+header .navigation .hamburger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+header .navigation .hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg)  translateY(-15px);
+}
+
+header .navigation .hamburger div {
+    height: 2px;
     width: 40px;
     background-color: #ffffff;
     margin: 8px 0;
@@ -189,6 +227,12 @@ header .navigation .hamburger div {
 
 header .navigation .mobile-menu {
     display: none;
+    opacity: 0;
+    position: absolute;
+    background-color: #0F0F0F;
+    top: 120px;
+    z-index: 10;
+    width: 100%;
 }
 
 header .navigation .menu {
@@ -237,7 +281,7 @@ header .navigation .menu ul li img:hover {
 
 .main .icon {
     border: 5px solid #ffffff;
-    padding: 93px 63px;
+    padding: 93px 63px 103px;
     text-align: center;
     color: #ffffff;
     width: fit-content;
@@ -263,7 +307,7 @@ header .navigation .menu ul li img:hover {
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
-    transform: translateY(250px);
+    transform: translateY(240px);
     width: 71vh;
     display: block;
     margin: 0 auto;
@@ -598,6 +642,10 @@ footer .foot .rights {
     footer .info .info-box {
         margin-top: 20px;
     }
+
+    .brands-container .brands img {
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -611,6 +659,37 @@ footer .foot .rights {
 
     header .navigation .logo {
         transform: translateX(-40px);
+    }
+
+    header .navigation .mobile-menu.open {
+        opacity: 1;
+        transition: .3s;
+    }
+    
+    header .navigation .mobile-menu.open ul {
+        list-style-type: none;
+    }
+    
+    header .navigation .mobile-menu.open ul li {
+        padding: 7px;
+        border-bottom: 1px solid #ffffff;
+        text-align: center;
+    }
+    
+    header .navigation .mobile-menu.open ul li a {
+        text-align: center;
+        color: #969696;
+        font-size: 12px;
+        line-height: 16px;
+        transition: .3s;
+    }
+
+    header .navigation .mobile-menu.open ul li img {
+        cursor: pointer;
+    }
+    
+    header .navigation .mobile-menu.open ul li a:hover {
+        color: #ffffff;
     }
     
 }
@@ -639,7 +718,6 @@ footer .foot .rights {
         padding: 0 10px;
     }
 }
-
 
 @media screen and (max-width: 790px) {
     .new-collection {
@@ -679,4 +757,97 @@ footer .foot .rights {
         transform: translateX(26px);
     }
     
+}
+
+@media screen and (max-width: 630px) {  
+    .collection-2018 .background {
+        display: none;
+    }
+
+    .collection-2018 .info {
+        width: auto;
+    }
+
+    .new-products .products {
+        width: auto;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    footer .info .info-box .text,
+    footer .info .info-box .tags {
+        width: auto;
+    }
+
+    .main .text {
+        padding: 0 10px;
+    }
+
+    .main .icon {
+        padding: 60px 30px;
+    }
+
+    header .navigation, header .info {
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+
+    header .navigation .logo,
+    header .navigation .hamburger,
+    header .info .contacts-dropdown,
+    header .info .auth {
+        transform: none;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .new-collection .info .products .product .product-img img,
+    .new-products .products .product .product-img img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .new-collection .info .products .product {
+        margin: 0 10px;
+    }
+
+    .collection-2018 .info .btn {
+        width: auto;
+    }
+
+    .brands-container .brands img {
+        width: 150px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main .text {
+        overflow: hidden;
+        height: 265px;
+    }
+
+    .main .icon h1 {
+        font-size: 40px;
+        height: 66px;
+    }
+
+    .main .icon span {
+        font-size: 18px;
+    }
+
+    .main .icon {
+        padding: 50px 30px;
+    }
+
+    h3 {
+        font-size: 28px!important;
+    }
+
+    .new-collection .info .products .product .product-img {
+        padding: 40px 15px;
+    }
 }
