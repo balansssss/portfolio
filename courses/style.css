@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "Roboto"; 
+    src: url("./fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+.container {
+    padding: 0 16vw;
+}
+
+section.common {
+    padding-top: 200px;
+}
+
+.title.common {
+    font-size: 48px;
+    line-height: 67px;
+}
+
+.text.common {
+    line-height: 26px;
+}
+
+img.common {
+    width: 90px;
+    height: 90px;
+    vertical-align: bottom;
+}
+
+/*SECTION-HEADER*/
+
+
+section.main {
+    background-image: url("./img/main-screen__bgc.png");
+    background-size: cover;
+    background-position: center;
+}
+
+section.main header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+section.main .logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 80px;
+}
+
+section.main nav ul {
+    list-style-type: none;
+}
+
+section.main nav ul li {
+    display: inline-block;
+    padding: 0 28px;
+}
+
+section.main nav ul li a{
+    line-height: 24px;
+    font-size: 16px;
+}
+
+section.main .signin {
+    margin-right: 80px;
+    padding: 10px 30px;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-radius: 50px;
+    text-align: center;
+    border: none;
+    line-height: 24px;
+}
+
+/*SECTION-CONTENT*/
+
+section.main .content{
+    margin-top: 185px;
+}
+
+section.main .content h2 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 90px;
+}
+
+section.main .content .date {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+section.main .content .date-item {
+    margin: 0 15px;
+    text-align: center;
+    width: 102px;
+    background: #121212;
+    padding: 20px 0;
+}
+
+section.main .content .date-item:first-child {
+    margin-left: 0;
+}
+
+section.main .content .date-item:last-child {
+    margin-right: 0;
+}
+
+section.main .content .date-item-count {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 50px;
+}
+
+section.main .content .date-item-text {
+    line-height: 22px;
+    opacity: 0.4;
+}
+
+/*SECTION-CART*/
+
+section.main .cart {
+    margin-top: 218px;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+section.main .add-to-cart {
+    padding: 10px 30px;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    border-radius: 50px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+}
+
+section.main p, section.main span {
+    line-height: 24px;
+}
+
+
+section.main .students {
+    margin: 0 5vw;
+    padding: 35px 0;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.main .students-info {
+    color: #666666;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.main .graph-info {
+    color: #666666;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.main .graph-line {
+    margin: 8px 0 5px 0;
+    height: 6px;
+    width: 700px;
+    background-color: #ffffff;
+}
+
+section.main .graph-line-fill {
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
+
+section.main .graph-count {
+    color: #666666;
+}
+
+section.content {
+    background-image: url("./img/bgc.png");
+}
+
+/*SECTION-ABOUTUS*/
+
+section.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.about-us .about-img {
+    background-image: url("./img/image.png");
+    width: 526px;
+    height: 542px;
+}
+
+section.about-us .text {
+    margin-top: 45px;
+    width: 630px;
+}
+
+/*SECTION-QUICKSTART*/
+
+section.quick-start .title {
+    display: inline;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+section.quick-start .text {
+    margin-top: 50px;
+    opacity: 0.5;
+    width: 410px;
+}
+
+section.quick-start .infographics {
+    margin-top: 80px;
+    display: flex;
+}
+
+section.quick-start .infographics-item-percent {
+    font-size: 36px;
+    line-height: 50px;
+}
+
+section.quick-start .infographics-item-img {
+    width: 324px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+section.quick-start .infographics-item-img-bcg {
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    width: 100%;
+}
+
+section.quick-start .infographics-item:nth-child(1) .infographics-item-img-bcg {
+    height: 100%;
+}
+
+section.quick-start .infographics-item:nth-child(2) .infographics-item-img-bcg {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    height: 75%;
+}
+
+section.quick-start .infographics-item:nth-child(3) .infographics-item-img-bcg {
+    height: 37.5%;
+}
+
+section.quick-start .infographics-item:nth-child(4) .infographics-item-img-bcg {
+    height: 12.5%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+section.quick-start .infographics-item-text {
+    margin-top: 35px;
+    line-height: 22px;
+    font-size: 14px;
+    opacity: 0.5;
+    width: 306px;
+}
+
+/*SECTION-WORK*/
+
+section.work .title {
+    text-align: center;
+}
+
+section.work .work-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+section.work .work-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.work .work-info-item-img {
+    width: 100px;
+    height: 100px;
+}
+
+section.work .work-info-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+section.work .work-info-item-text {
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 30px;
+    width: 358px;
+}
