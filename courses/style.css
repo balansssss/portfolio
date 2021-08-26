@@ -14,13 +14,25 @@
 
 a {
     text-decoration: none;
+    transition: .3s;
+}
+
+a:hover {
+    color: #7C6AFA;
 }
 
 button {
     border: none;
     cursor: pointer;
+    transition: .3s;
 }
 
+button:hover,
+input[type="submit"]:hover {
+    background: #ffffff!important;
+    color: #7C6AFA;
+    cursor: pointer;
+}
 
 .container {
     padding: 0 16vw;
@@ -54,17 +66,28 @@ section.main {
     background-position: center;
 }
 
+section.main .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+section.main .hamburger-line {
+    width: 40px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #ffffff;
+}
+
 section.main header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 40px;
+    padding: 40px 30px 0 30px;
 }
 
 section.main .logo {
     width: 40px;
     height: 40px;
-    margin-left: 80px;
 }
 
 section.main nav ul {
@@ -82,13 +105,35 @@ section.main nav ul li a{
 }
 
 section.main .signin {
-    margin-right: 80px;
     padding: 10px 30px;
     background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
     border-radius: 50px;
     text-align: center;
     border: none;
     line-height: 24px;
+}
+
+section.main .mobile-nav {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    text-align: right;
+    background-color: #121212;
+    transition: .3s;
+}
+
+section.main .mobile-nav ul {
+    list-style: none;
+}
+
+section.main .mobile-nav ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ffffff;
+}
+
+section.main .mobile-nav ul li:last-child {
+    border-bottom: 0;
 }
 
 /*SECTION-CONTENT*/
@@ -634,12 +679,24 @@ section.article .social-link-img {
         padding: 0 100px;
     }
 
+    section.main .mobile-nav.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+    }
+
     .navigation {
         display: none;
     }
 
     section.common {
         padding-top: 100px;
+    }
+
+    section.main .hamburger {
+        display: block;
     }
 
     section.main .content h2 {
@@ -784,8 +841,8 @@ section.article .social-link-img {
         height: 30px;
     }
 
-    section.main .logo {
-        margin-left: 15px;
+    section.main header {
+        padding: 40px 15px 0 15px;
     }
 }
 
