@@ -1,0 +1,9 @@
+/*FILTER*/
+export const CHANGE_FILTER = 'CHANGE_FILTER'
+
+/*TICKETS*/
+export const SET_SEARCHID = 'SET_SEARCHID'
+export const SET_ERRMES = 'SET_ERRMES'
+export const SET_TICKETS = 'SET_TICKETS'
+export const CHANGE_SORT = 'CHANGE_SORT'
+export const LOAD_TICKETS = 'LOAD_TICKETS'
