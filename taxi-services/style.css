@@ -1,0 +1,851 @@
+@font-face {
+    font-family: "Lato Black"; 
+    src: url("./fonts/Lato-Black.ttf") format("truetype"); 
+} 
+
+@font-face {
+    font-family: "Lato Regular"; 
+    src: url("./fonts/Lato-Regular.ttf") format("truetype"); 
+} 
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato Regular";
+}
+
+
+h2 {
+    font-size: 50px;
+    font-family: "Lato Black";
+}
+
+h3 {
+    font-size: 35px;
+    font-family: "Lato Black";
+}
+
+button, 
+input[type="submit"] {
+    font-family: "Lato Black";
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    padding: 8px 25px;
+}
+
+.container {
+    padding: 80px 200px;
+}
+
+.container__title {
+    text-align: center;
+}
+
+.yellow {
+    color: #ffc61a;
+    font-family: "Lato Black";
+}
+
+.main {
+    background-image: url("./img/Background.png");
+    background-size: cover;
+    color: #ffffff;
+    height: 730px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+}
+
+.logo {
+    font-size: 16px;
+}
+
+.logo-name {
+    font-size: 40px;
+    font-family: "Lato Black";
+}
+
+.logo-text {
+    letter-spacing: 2px;
+}
+
+.navigation {
+    list-style-type: none;
+}
+
+.navigation li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    margin: 0 12px;
+    transition: .4s;
+}
+
+.navigation-hamburger {
+    display: none;
+    cursor: pointer;
+    transition: .4s;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.navigation-hamburger.active {
+    background-color: #ffc61a;
+}
+
+.navigation-hamburger.active .navigation-hamburger__line {
+    background-color: #ffffff;
+}
+
+.navigation-hamburger__line {
+    height: 4px;
+    width: 40px;
+    background-color: #ffc61a;
+    margin-top: 5px;
+}
+
+.navigation-hamburger__line:nth-child(1) {
+    margin-top: 0;
+}
+
+.mob-navigation {
+    display: none;
+    list-style-type: none;
+    background-color: #ffc61a;
+    color: #000000;
+    position: absolute;
+    top: 100px;
+    right: 80px;
+    transition: .4s;
+    opacity: 0;
+}
+
+.mob-navigation.active {
+    display: none;
+}
+
+.mob-navigation li {
+    list-style-type: none;
+    cursor: pointer;
+    font-family: "Lato Black";
+    padding: 5px 20px 3px 10px;
+    transition: .4s;
+    font-size: 17px;
+}
+
+.mob-navigation li:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.mob-navigation-active {
+    background-color: #ffffff;
+}
+
+.navigation .navigation-active {
+    font-family: "Lato Black";
+    color: #000000;
+    background-color: #ffc61a;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.phone {
+    font-family: "Lato Black";
+    font-size: 72px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.main-car {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 100px;
+    width: 700px;
+}
+
+.about {
+    background-color: #ffc61a;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.info_left {
+    margin-right: 70px;
+}
+
+.info_right {
+    margin-left: 70px;
+}
+
+.about__info__subtitle {
+    margin-top: 10px;
+}
+
+.about__info__text {
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.about__info__button {
+    margin-top: 20px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.about__info__button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.about__form {
+    background-color: #ffffff;
+    width: 400px;
+    text-align: center;
+}
+
+.about__form__title {
+    color:#ffffff;
+    background-color: #000000;
+    padding: 15px 30px;
+    text-align: left;
+}
+
+.about__form input {
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    margin: 30px 15px 0 15px;
+    padding-bottom: 5px;
+    width: 160px;
+}
+
+.about__form input.about__form__fullinput {
+    width: 355px;
+}
+
+.about__form input::placeholder {
+    color: #000000;
+    font-size: 16px;
+}
+
+.about__form input.about__form__submit {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 0;
+    width: 355px;
+}
+
+.about__form input.about__form__submit:hover {
+    background-color: #ffc61a;
+    color: #000000;
+}
+
+/*SECTION TARIFS*/
+
+.tarifs__container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarifs__container__item {
+    background-color: #f5f4f2;
+    text-align: center;
+    position: relative;
+    padding: 100px 30px 30px 30px;
+}
+
+.tarifs__container__item:nth-child(2) {
+    margin: 0 15px;
+}
+
+.tarifs__container__item__car {
+    position: absolute;
+    width: 366px;
+    height: 178px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -100px; 
+}
+
+.tarifs__container__item__info {
+    margin-top: 25px;
+    max-width: 345px;
+    font-size: 18px;
+}
+
+.tarifs__container__item__price {
+    margin-top: 25px;
+    font-size: 44px;
+    font-family: "Lato Black";
+    color: #ffc61a;
+}
+
+.tarifs__container__item__button {
+    margin-top: 25px;
+    background-color: #ffc61a;
+    color: #000000;
+}
+
+.tarifs__container__item__button:hover {
+    background-color: #000000;
+    color: #ffc61a;
+}
+
+.tarifs__container__item.active {
+    background-color: #ffc61a;
+    background-image: url("./img/Tarif_star.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.tarifs__container__item.active .tarifs__container__item__price {
+    color: #000000;
+}
+
+.tarifs__container__item.active .tarifs__container__item__button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.tarifs__container__item.active .tarifs__container__item__button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.blog {
+    background-image: url("./img/Blog_back.png");
+    background-size: cover;
+    background-position: right;
+    color: #ffffff;
+    text-align: center;
+}
+
+.blog__container {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog__container__item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.blog__container__item__img {
+    width: 90px;
+    height: 90px;
+    margin-right: 40px;
+}
+
+.blog__container__item__title {
+    font-size: 25px;
+    color: #ffc61a;
+}
+
+.blog__container__item__info {
+    font-size: 18px;
+    margin-top: 15px;
+    width: 360px;
+}
+
+.blog__title__button {
+    margin-top: 100px;
+    background-color: #ffc61a;
+    color: #000000;
+}
+
+.blog__title__button:hover {
+    background-color: #ffffff;
+}
+
+/*SECTION APP*/
+.app {
+    padding-bottom: 0;
+}
+
+.app__container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.app__container__title {
+    font-size: 25px;
+    font-family: "Lato Black";
+}
+
+.app__container__info {
+    font-size: 18px;
+    max-width: 350px;
+    margin-top: 30px;
+}
+
+.app__container__img {
+    margin-top: 80px;
+    cursor: pointer;
+    width: 220px;
+    height: 65px;
+}
+
+.app_apple {
+    margin-left: 20px;
+}
+
+.app__container__phone {
+    width: 350px;
+    height: auto;
+}
+
+/*SECTION CLIENTS*/
+
+.clients {
+    background-image: url("./img/Clients_back.png");
+    background-size: cover;
+    color: #ffffff;
+}
+
+.clients__container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients__container__item {
+    background-color: #040707;
+    padding: 40px 50px;
+    border-radius: 40px;
+}
+
+.clients__container__item:nth-child(1) {
+    margin-right: 15px;
+}
+
+.clients__container__item:nth-child(1) {
+    margin-left: 15px;
+}
+
+.clients__container__item__info {
+   font-size: 18px; 
+   word-spacing: 2px;
+   max-width: 480px;
+}
+
+.clients__container__item__img {
+    margin-top: 20px;
+    width: 74px;
+    height: 74px;
+}
+
+.clients__container__item__data {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.clients__container__item__data__name {
+    color: #ffc61a;
+    font-family: "Lato Black";
+    font-size: 25px;
+}
+
+.clients__container__item__data__status {
+    font-family: "Lato Black";
+    font-size: 18px;
+}
+
+/*SECTION CONTACTS*/
+
+.contacts {
+    background-color: #ffc61a;
+    text-align: center;
+}
+
+.contacts .phone {
+    margin-top: 10px;
+}
+
+/*SECTION FOOTER*/
+
+.footer {
+    background-image: url("./img/Footer_back.png");
+    background-size: cover;
+    color: #ffffff;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__container__item {
+    max-width: 350px;
+}
+
+.footer__container__item__title {
+    font-size: 25px;
+    font-family: "Lato Black";
+}
+
+.footer__container__item__title::after {
+    content: "";
+    margin: 35px 0;
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: #ffc61a;
+}
+
+.footer__container__item__info {
+    font-size: 18px;
+}
+
+.footer__container__item__social {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__container__item__social__img {
+    height: 22px;
+    margin-left: 10px;
+}
+
+.footer__container__item__social__img:nth-child(1) {
+    margin-left: 0;
+}
+
+.footer__container__item__app {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.footer__container__item__app__title {
+    color: #ffc61a;
+    font-size: 20px;
+}
+
+.footer__container__item__app__img {
+    width: 24px;
+}
+
+.footer__container__item__contact {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer__container__item__contact__img {
+    height: 24px;
+}
+
+.footer__container__item__contact:nth-child(4) .footer__container__item__contact__img{
+    width: 20px;
+    height: 20px;
+}
+
+.footer__container__item__contact__info {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1500px) {
+    .tarifs__container__item__car {
+        width: 280px;
+        height: 140px;
+        top: -70px;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .container {
+        padding: 80px 100px;
+    }
+
+    .about {
+        padding-top: 100px;
+    }
+
+    .app {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container {
+        padding: 80px 40px;
+    }
+
+    .about {
+        padding-top: 100px;
+    }
+
+    .app {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .footer__container__item {
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .blog__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarifs__container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .tarifs__container__item {
+        margin-top: 100px!important;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info_left, .info_right {
+        margin: 0;
+    }
+
+    .info_right {
+        margin-top: 50px;
+    }
+
+    .about__form {
+        width: auto;
+        max-width: 780px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .navigation {
+        display: none;
+    }
+
+    .navigation-hamburger {
+        display: block;
+    }
+
+    .mob-navigation.active {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    .clients__container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .clients__container__item {
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .app {
+        padding-bottom: 80px;
+    }
+
+    .app__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .app__container__info {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .app__container__img {
+        margin-top: 50px;
+    }
+
+    .app__container__phone {
+        margin-top: 50px;
+        display: none;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__container__item {
+        margin-top: 70px;
+        max-width: 400px;
+    }
+
+    .footer__container__item:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main-car {
+        width: 500px;
+        margin-top: 120px;
+    }
+
+    .phone {
+        font-size: 56px;
+        margin-top: 200px;
+    }
+
+    .header {
+        padding: 25px 40px;
+    }
+
+    .mob-navigation {
+        right: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-car {
+        width: 340px;
+        margin-top: 200px;
+    }
+
+    .phone {
+        font-size: 56px;
+        margin-top: 200px;
+    }
+
+    .blog__container__item__info {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .phone {
+        font-size: 32px;
+    }
+
+    .main-car {
+        margin-top: 220px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .blog__container__item__info {
+        width: 200px;
+    }
+
+    .about__form input {
+        width: 120px;
+    }
+
+    .about__form input.about__form__fullinput {
+        width: 275px;
+    }
+    
+    .about__form input.about__form__submit {
+        width: 275px;
+        margin-top: 30px;
+    }
+
+    .clients__container__item {
+        text-align: center;
+        padding: 20px 30px;
+    }
+
+    .clients__container__item__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .blog__container__item__info {
+        width: 180px;
+    }
+
+    .tarifs__container__item__car {
+        width: 220px;
+        height: 110px;
+        top: -50px;
+    }
+
+    .main-car {
+        width: 300px;
+        margin-top: 200px;
+    }
+
+    .phone {
+        margin-top: 250px;
+    }
+
+    .blog__container__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog__container__item__img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about__form input,
+    .about__form input.about__form__fullinput,
+    .about__form input.about__form__submit {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .main-car {
+        width: 250px;
+        margin-top: 225px;
+    }
+}
