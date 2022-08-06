@@ -15,6 +15,10 @@
     font-family: "Lexend Regular";
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -46,7 +50,6 @@ button.blue:hover {
 
 .wrapper {
     padding: 0 120px;
-    box-sizing: border-box;
 }
 
 .main {
@@ -56,6 +59,7 @@ button.blue:hover {
     background-size: cover;
     width: 100vw;
     height: 710px;
+    box-sizing: border-box;
 }
 
 .main * {
@@ -111,6 +115,11 @@ li {
 }
 
 h2.title {
+    font-size: 36px;
+    font-family: 'Lexend Bold';
+}
+
+.main .content .title {
     font-size: 48px;
 }
 
@@ -137,12 +146,133 @@ h2.title {
     display: none;
 }
 
+.privileges {
+    text-align: center;
+    padding: 70px 0;
+}
+
+.privileges .description {
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    font-size: 18px;
+}
+
+.privileges .preferences {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.privileges .preferences .preference img {
+    width: 94px;
+    height: 94px;
+}
+
+.privileges .preferences .preference .info {
+    margin-top: 20px;
+    max-width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.games-genres {
+    padding: 40px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.games-genres .link-more {
+    font-weight: 600;
+    font-size: 18px;
+    color: #3B44F6;
+    transition: .5s;
+}
+
+.games-genres .link-more:hover {
+    color: #191d6c;
+}
+
+.games-genres .games {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.games-genres .games .game {
+    width: 199px;
+    height: 199px;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+}
+
+.games-genres .games .game .title {
+    color: #ffffff;
+}
+
+.games-genres .games .game:nth-child(1) {
+    background-image: url(/assets/img/games-genres/strategy.png);
+}
+
+.games-genres .games .game:nth-child(2) {
+    background-image: url(/assets/img/games-genres/fps.png);
+}
+
+.games-genres .games .game:nth-child(3) {
+    background-image: url(/assets/img/games-genres/rpg.png);
+}
+
+.games-genres .games .game:nth-child(4) {
+    background-image: url(/assets/img/games-genres/puzzle.png);
+}
+
+.games-genres .games .game:nth-child(5) {
+    background-image: url(/assets/img/games-genres/roles.png);
+}
+
+.games-genres .games .game:nth-child(6) {
+    background-image: url(/assets/img/games-genres/sports.png);
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1480px) { 
+    .games-genres .games .game:nth-child(6) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1270px) { 
+    .games-genres .games .game:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) { 
+    .games-genres .games .game:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 565px) { 
+    .games-genres .games .game:nth-child(4) {
+        display: flex;
     }
 }
 
@@ -215,6 +345,11 @@ h2.title {
     .main header .mobile-nav li button {
         padding: 10px 30px;
     }
+
+    .games-genres .games .game {
+        width: 150px;
+        height: 150px;
+    }
 }
     
 @media screen and (max-width: 479px) {
@@ -224,6 +359,24 @@ h2.title {
     }
 
     .main .content {
+        text-align: center;
+    }
+
+    .privileges .preferences .preference img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .privileges .description {
+        font-size: 14px;
+    }
+
+    .privileges .preferences .preference .info {
+        font-size: 16px;
+    }
+
+    .section-header {
+        justify-content: center;
         text-align: center;
     }
 }
@@ -239,5 +392,20 @@ h2.title {
 
     .main .content .description {
          font-size: 22px;
+    }
+
+    .privileges .preferences .preference .info {
+        font-size: 14px;
+    }
+
+    .games-genres .games .game {
+        width: 118px;
+        height: 118px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .games-genres .games {
+        justify-content: center;
     }
 }
