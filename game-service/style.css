@@ -17,6 +17,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: #F5F4F9;
 }
 
 a {
@@ -243,6 +244,75 @@ h2.title {
     background-image: url(/assets/img/games-genres/sports.png);
 }
 
+.games-bestsellers {
+    padding: 15px 0;
+}
+
+.games-bestsellers .games {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.games-bestsellers .games .game {
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 16px 16px 24px 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.games-bestsellers .games .game img {
+    width: 230px;
+    height: 220px;
+}
+
+.games-bestsellers .games .game .title {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.games-bestsellers .games .game .prices {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.games-bestsellers .games .game .prices .price {
+    color: #3B44F6;
+}
+
+.games-bestsellers .games .game .prices .sale {
+    color: #7D7D7D;
+    font-size: 14px;
+    background-color: #F5F4F9;
+    padding: 3px 3px 3px 10px;
+    border-radius: 5px;
+    margin-left: -8px;
+    text-decoration: line-through;
+}
+
+.games-bestsellers .games .game .prices .percent {
+    color: #FC326F;
+    background: rgba(252, 50, 111, 0.2);
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 2;
+    position: relative;
+}
+
+.games-bestsellers .games .game .tag {
+    display: inline-block;
+    margin-top: 13px;
+    color: #3B44F6;
+    background-color: #D8DAFD;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -270,10 +340,28 @@ h2.title {
     }
 }
 
+
+@media screen and (max-width: 645px) {
+    .games-bestsellers .games .game img {
+        width: 200px;
+        height: 190px;
+    }
+}
+
 @media screen and (max-width: 565px) { 
     .games-genres .games .game:nth-child(4) {
         display: flex;
     }
+
+    .games-bestsellers .games {
+        justify-content: center;
+    }
+
+    .games-bestsellers .games .game img {
+        width: 280px;
+        height: 270px;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -379,6 +467,10 @@ h2.title {
         justify-content: center;
         text-align: center;
     }
+
+    .games-bestsellers .title {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -407,5 +499,10 @@ h2.title {
 
     .games-genres .games {
         justify-content: center;
+    }
+
+    .games-bestsellers .games .game img {
+        width: 200px;
+        height: 190px;
     }
 }
