@@ -187,21 +187,24 @@ h2.title {
     flex-wrap: wrap;
 }
 
-.games-genres .link-more {
+.section-header .link-more {
     font-weight: 600;
     font-size: 18px;
     color: #3B44F6;
     transition: .5s;
 }
 
-.games-genres .link-more:hover {
+.section-header .link-more:hover {
     color: #191d6c;
 }
 
 .games-genres .games {
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
 }
 
 .games-genres .games .game {
@@ -248,14 +251,19 @@ h2.title {
     padding: 15px 0;
 }
 
-.games-bestsellers .games {
+.games-bestsellers .games,
+.games-popular .games {
     margin-top: 28px;
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
 }
 
-.games-bestsellers .games .game {
+.games-bestsellers .games .game,
+.games-popular .games .game {
     border-radius: 8px;
     background-color: #ffffff;
     padding: 16px 16px 24px 16px;
@@ -263,28 +271,33 @@ h2.title {
     margin-top: 15px;
 }
 
-.games-bestsellers .games .game img {
+.games-bestsellers .games .game img,
+.games-popular .games .game img {
     width: 230px;
     height: 220px;
 }
 
-.games-bestsellers .games .game .title {
+.games-bestsellers .games .game .title,
+.games-popular .games .game .title {
     margin-top: 15px;
     font-weight: 600;
     font-size: 18px;
 }
 
-.games-bestsellers .games .game .prices {
+.games-bestsellers .games .game .prices,
+.games-popular .games .game .prices {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
 }
 
-.games-bestsellers .games .game .prices .price {
+.games-bestsellers .games .game .prices .price,
+.games-popular .games .game .prices .price {
     color: #3B44F6;
 }
 
-.games-bestsellers .games .game .prices .sale {
+.games-bestsellers .games .game .prices .sale,
+.games-popular .games .game .prices .sale {
     color: #7D7D7D;
     font-size: 14px;
     background-color: #F5F4F9;
@@ -294,7 +307,8 @@ h2.title {
     text-decoration: line-through;
 }
 
-.games-bestsellers .games .game .prices .percent {
+.games-bestsellers .games .game .prices .percent,
+.games-popular .games .game .prices .percent{
     color: #FC326F;
     background: rgba(252, 50, 111, 0.2);
     padding: 3px;
@@ -304,13 +318,18 @@ h2.title {
     position: relative;
 }
 
-.games-bestsellers .games .game .tag {
+.games-bestsellers .games .game .tag,
+.games-popular .games .game .tag {
     display: inline-block;
     margin-top: 13px;
     color: #3B44F6;
     background-color: #D8DAFD;
     padding: 4px 10px;
     border-radius: 5px;
+}
+
+.games-popular {
+    padding: 50px 0;
 }
 
 @keyframes fade {
@@ -323,21 +342,21 @@ h2.title {
 }
 
 @media screen and (max-width: 1480px) { 
-    .games-genres .games .game:nth-child(6) {
+    /*.games-genres .games .game:nth-child(6) {
         display: none;
-    }
+    }*/
 }
 
 @media screen and (max-width: 1270px) { 
-    .games-genres .games .game:nth-child(5) {
+    /*.games-genres .games .game:nth-child(5) {
         display: none;
-    }
+    }*/
 }
 
 @media screen and (max-width: 1050px) { 
-    .games-genres .games .game:nth-child(4) {
+    /*.games-genres .games .game:nth-child(4) {
         display: none;
-    }
+    }*/
 }
 
 
@@ -349,9 +368,9 @@ h2.title {
 }
 
 @media screen and (max-width: 565px) { 
-    .games-genres .games .game:nth-child(4) {
+    /*.games-genres .games .game:nth-child(4) {
         display: flex;
-    }
+    }*/
 
     .games-bestsellers .games {
         justify-content: center;
@@ -434,6 +453,10 @@ h2.title {
         padding: 10px 30px;
     }
 
+    .games-genres .games {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
     .games-genres .games .game {
         width: 150px;
         height: 150px;
@@ -498,7 +521,7 @@ h2.title {
     }
 
     .games-genres .games {
-        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
     .games-bestsellers .games .game img {
