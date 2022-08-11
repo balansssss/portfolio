@@ -260,6 +260,7 @@ h2.title {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
+    column-gap: 20px;
 }
 
 .games-bestsellers .games .game,
@@ -332,6 +333,76 @@ h2.title {
     padding: 50px 0;
 }
 
+.coming-soon {
+    margin: 30px 0;
+    background-color: #000000;
+    padding: 50px 0;
+}
+
+.coming-soon * {
+    color: #ffffff;
+}
+
+.coming-soon .games {
+    /*display: flex;
+    justify-content: center;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    justify-self: center;
+    justify-items: center;
+    margin-top: 25px;
+}
+
+.coming-soon .games .game {
+    background-color: #3B44F6;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: end;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.coming-soon .games .column-left .game {
+    width: 633px;
+    height: 400px;
+}
+
+.coming-soon .games .column-right .game {
+    width: 447px;
+    height: 262px;
+}
+
+.coming-soon .games .column-left .game:nth-child(1) {
+    background-image: url(/assets/img/games-coomingsoon/CD.png);
+}
+
+.coming-soon .games .column-left .game:nth-child(2) {
+    background-image: url(/assets/img/games-coomingsoon/NBA.png);
+}
+
+.coming-soon .games .column-right .game:nth-child(1) {
+    background-image: url(/assets/img/games-coomingsoon/Fifa.png);
+}
+
+.coming-soon .games .column-right .game:nth-child(2) {
+    background-image: url(/assets/img/games-coomingsoon/RE.png);
+}
+
+.coming-soon .games .column-right .game:nth-child(3) {
+    background-image: url(/assets/img/games-coomingsoon/alien.png);
+}
+
+.coming-soon .games .game .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    max-width: 340px;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -341,24 +412,39 @@ h2.title {
     }
 }
 
-@media screen and (max-width: 1480px) { 
-    /*.games-genres .games .game:nth-child(6) {
-        display: none;
-    }*/
+@media screen and (max-width: 1300px) { 
+    .coming-soon .games .game {
+        padding: 20px 25px;
+    }
+
+    .coming-soon .games .game .title {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .coming-soon .games .column-left .game {
+        width: 483px;
+        height: 250px;
+    }
+    
+    .coming-soon .games .column-right .game {
+        width: 297px;
+        height: 161px;
+    }
 }
 
-@media screen and (max-width: 1270px) { 
-    /*.games-genres .games .game:nth-child(5) {
-        display: none;
-    }*/
+@media screen and (max-width: 885px) {     
+    .coming-soon .games .column-left .game {
+        width: 297px;
+        height: 161px;
+    }
 }
 
-@media screen and (max-width: 1050px) { 
-    /*.games-genres .games .game:nth-child(4) {
-        display: none;
-    }*/
+@media screen and (max-width: 700px) { 
+    .coming-soon .games {
+        grid-template-columns: 1fr;
+    }
 }
-
 
 @media screen and (max-width: 645px) {
     .games-bestsellers .games .game img {
@@ -368,9 +454,6 @@ h2.title {
 }
 
 @media screen and (max-width: 565px) { 
-    /*.games-genres .games .game:nth-child(4) {
-        display: flex;
-    }*/
 
     .games-bestsellers .games {
         justify-content: center;
@@ -527,5 +610,12 @@ h2.title {
     .games-bestsellers .games .game img {
         width: 200px;
         height: 190px;
+    }
+
+  
+    .coming-soon .games .column-left .game,
+    .coming-soon .games .column-right .game {
+        width: 240px;
+        height: 150px;
     }
 }
