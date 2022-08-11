@@ -403,6 +403,72 @@ h2.title {
     max-width: 340px;
 }
 
+.reviews {
+    padding: 80px 0;
+    background-color: #F5F4F9;
+    text-align: center;
+}
+
+.reviews .description {
+    margin-top: 15px;
+}
+
+.reviews .comments {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews .comments .comment {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 32px 24px;
+    max-width: 296px;
+}
+
+.reviews .comments .comment.current {
+    max-width: 338px;
+}
+
+.reviews .comments .comment .person {
+    width: 90px;
+    height: 90px;
+}
+
+.reviews .comments .comment.current .person {
+    width: 110px;
+    height: 110px;
+}
+
+.reviews .comments .comment .name {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.reviews .comments .comment.current .name {
+    font-size: 24px;
+}
+
+.reviews .comments .comment .rating {
+    margin-top: 10px;
+}
+
+.reviews .comments .comment .text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.reviews .comments .comment.current .text {
+    font-size: 15px;
+}
+
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -543,6 +609,31 @@ h2.title {
     .games-genres .games .game {
         width: 150px;
         height: 150px;
+    }
+
+    .reviews .comments {
+        flex-wrap: wrap;
+    }
+
+    .reviews .comments .comment {
+        margin: 10px 0;
+    }
+
+    .reviews .comments .comment.current .person {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .reviews .comments .comment.current .name {
+        font-size: 20px;
+    }
+    
+    .reviews .comments .comment.current .text {
+        font-size: 14px;
+    }
+
+    .reviews .comments .comment.current {
+        max-width: 296px;
     }
 }
     
