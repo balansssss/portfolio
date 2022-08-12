@@ -74,13 +74,22 @@ button.blue:hover {
     padding: 22px 0;
 }
 
-.main header .logo {
+.main header .logo,
+footer .logo {
     font-family: "Lexend Bold";
     font-size: 28px;
+}
+
+.main header .logo {
     line-height: 1px;
 }
 
-.main header .logo span {
+footer .logo {
+    color: #ffffff;
+}
+
+.main header .logo span,
+footer .logo span {
     font-family: "Lexend Bold";
     color: #3B44F6;
 }
@@ -468,6 +477,52 @@ h2.title {
     font-size: 15px;
 }
 
+footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0E0E0E;
+}
+
+footer * {
+    color: #ffffff;
+}
+
+footer .column .title,
+footer .follow .title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+footer .column ul {
+    margin-top: 24px;
+}
+
+footer .column ul li {
+    cursor: pointer;
+    margin-top: 16px;
+    transition: .4s;
+    color: #A0A0A0;
+}
+
+footer .column ul li:hover {
+    color: #3B44F6;
+}
+
+footer .follow .images {
+    margin-top: 24px;
+}
+
+footer .follow .images img {
+    margin: 0 6px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+}
+
+footer .follow .images img:first-child {
+    margin-left: 0;
+}
 
 @keyframes fade {
     0% {
@@ -517,6 +572,10 @@ h2.title {
         width: 200px;
         height: 190px;
     }
+
+    footer .logo {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 565px) { 
@@ -528,6 +587,16 @@ h2.title {
     .games-bestsellers .games .game img {
         width: 280px;
         height: 270px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer * {
+        margin: 10px 5px;
     }
 
 }
