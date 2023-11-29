@@ -54,7 +54,7 @@ button.blue:hover {
 }
 
 .main {
-    background-image: url("/assets/img/main_banner.png");
+    background-image: url("./assets/img/main_banner.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -233,27 +233,27 @@ h2.title {
 }
 
 .games-genres .games .game:nth-child(1) {
-    background-image: url(/assets/img/games-genres/strategy.png);
+    background-image: url(./assets/img/games-genres/strategy.png);
 }
 
 .games-genres .games .game:nth-child(2) {
-    background-image: url(/assets/img/games-genres/fps.png);
+    background-image: url(./assets/img/games-genres/fps.png);
 }
 
 .games-genres .games .game:nth-child(3) {
-    background-image: url(/assets/img/games-genres/rpg.png);
+    background-image: url(./assets/img/games-genres/rpg.png);
 }
 
 .games-genres .games .game:nth-child(4) {
-    background-image: url(/assets/img/games-genres/puzzle.png);
+    background-image: url(./assets/img/games-genres/puzzle.png);
 }
 
 .games-genres .games .game:nth-child(5) {
-    background-image: url(/assets/img/games-genres/roles.png);
+    background-image: url(./assets/img/games-genres/roles.png);
 }
 
 .games-genres .games .game:nth-child(6) {
-    background-image: url(/assets/img/games-genres/sports.png);
+    background-image: url(./assets/img/games-genres/sports.png);
 }
 
 .games-bestsellers {
@@ -387,23 +387,23 @@ h2.title {
 }
 
 .coming-soon .games .column-left .game:nth-child(1) {
-    background-image: url(/assets/img/games-coomingsoon/CD.png);
+    background-image: url(./assets/img/games-coomingsoon/CD.png);
 }
 
 .coming-soon .games .column-left .game:nth-child(2) {
-    background-image: url(/assets/img/games-coomingsoon/NBA.png);
+    background-image: url(./assets/img/games-coomingsoon/NBA.png);
 }
 
 .coming-soon .games .column-right .game:nth-child(1) {
-    background-image: url(/assets/img/games-coomingsoon/Fifa.png);
+    background-image: url(./assets/img/games-coomingsoon/Fifa.png);
 }
 
 .coming-soon .games .column-right .game:nth-child(2) {
-    background-image: url(/assets/img/games-coomingsoon/RE.png);
+    background-image: url(./assets/img/games-coomingsoon/RE.png);
 }
 
 .coming-soon .games .column-right .game:nth-child(3) {
-    background-image: url(/assets/img/games-coomingsoon/alien.png);
+    background-image: url(./assets/img/games-coomingsoon/alien.png);
 }
 
 .coming-soon .games .game .title {
