@@ -1025,4 +1025,12 @@ a {
     .services .wrapper .service .image {
         max-width: 120px;
     }
+
+    .working .accordion .header .title .name {
+        margin-left: 10px;
+    }
+
+    .contact .wrapper .form .radio-label {
+        margin-right: 10px;
+    }
 }
