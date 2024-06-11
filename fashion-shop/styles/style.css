@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins Medium;
+}
+
+.container {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.main {
+    padding: 46px 0 63px 0;
+}
+
+.main .logo {
+    width: 236px;
+}
+
+.main .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .navigation {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main .navigation_link {
+    color: #242323;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.main .navigation_link.btn {
+    color: #fff;
+    background-color: #000;
+    border-radius: 7px;
+    padding: 13px 22px;
+}
+
+.main .slider {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 56px;
+    border-radius: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 75px 80px 0 100px;
+}
+
+.main .slider .wrapper .title {
+    font-family: Poppins Black;
+    font-size: 96px;
+    line-height: 100%;
+    max-width: 474px;
+}
+
+.main .slider .wrapper .info {
+    font-family: Poppins;
+    font-size: 32px;
+    margin-top: 40px;
+    line-height: 100%;
+}
+
+.main .slider .wrapper .button {
+    margin-top: 32px;
+    padding: 18px 40px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+a,
+button {
+    transition: 0.5s;
+}
+
+a:hover,
+button:hover {
+    color: #EBD96B!important;
+}
+
+.main .slider .wrapper {
+    margin-bottom: 90px;
+}
+
+.main .slider .image {
+    max-width: 600px;
+    width: 100%;
+}
+
+.main .slider .wrapper .title .yellow {
+    color: #EBD96B;
+    font-family: Poppins Black;
+}
+
+.banner {
+    background-color: #EBD96B;
+}
+
+.banner .container {
+    height: 186px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arrivals {
+    margin-top: 69px;
+}
+
+.container .ctitle {
+    font-family: Poppins Black;
+    font-size: 48px;
+    position: relative;
+    width: fit-content;
+}
+
+.container .ctitle .background {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    z-index: -1;
+}
+
+.arrivals .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 100px;
+}
+
+.arrivals .wrapper .card {
+    max-width: 484px;
+    text-decoration: none;
+}
+
+.arrivals .wrapper .card .image {
+    width: 100%;
+}
+
+.arrivals .wrapper .card .description {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrivals .wrapper .card .description .name {
+    font-size: 32px;
+    color: #000;
+}
+
+.arrivals .wrapper .card .description .explore {
+    font-size: 24px;
+    color: #7f7f7f;
+}
+
+.arrivals .wrapper .card .description .arrow {
+    width: 32px;
+}
+
+.sale {
+    background: linear-gradient(to left, #E0C340, #FFEC63);
+    margin-top: 190px;
+}
+
+.sale .image {
+    max-width: 750px;
+    width: 100%;
+}
+
+.sale .container {
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+.sale .star {
+    position: absolute;
+}
+
+.sale .star:nth-of-type(2) {
+    top: 150px;
+    left: 100px;
+}
+
+.sale .star:nth-of-type(3) {
+    top: 84px;
+    left: 600px;
+}
+
+.sale .star:nth-of-type(4) {
+    top: 490px;
+    left: 130px;
+}
+
+.sale .star:nth-of-type(5) {
+    top: 640px;
+    left: 650px;
+}
+
+.sale .wrapper {
+    margin: 100px 0 100px 66px;
+}
+
+.sale .wrapper .title {
+    font-size: 110px;
+    font-family: Poppins Black;
+    line-height: 100%;
+    max-width: 595px;
+}
+
+.sale .wrapper .title .white {
+    font-family: Poppins Black;
+    color: #fff;
+}
+
+.sale .wrapper .info {
+    margin-top: 35px;
+    font-size: 36px;
+    font-family: Poppins;
+    max-width: 670px;
+}
+
+.sale .wrapper .date {
+    margin-top: 40px;
+    font-family: Poppins;
+    font-size: 36px;
+}
+
+.sale .wrapper .btn {
+    margin-top: 50px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 26px;
+    padding: 26px 50px;
+    cursor: pointer;
+}
+
+
+
