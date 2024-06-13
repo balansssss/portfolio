@@ -117,7 +117,7 @@ button:hover {
     align-items: center;
 }
 
-.arrivals {
+.products {
     margin-top: 69px;
 }
 
@@ -135,40 +135,40 @@ button:hover {
     z-index: -1;
 }
 
-.arrivals .wrapper {
+.products .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: start;
     margin-top: 100px;
 }
 
-.arrivals .wrapper .card {
+.products .wrapper .card {
     max-width: 484px;
     text-decoration: none;
 }
 
-.arrivals .wrapper .card .image {
+.products .wrapper .card .image {
     width: 100%;
 }
 
-.arrivals .wrapper .card .description {
+.products .wrapper .card .description {
     margin-top: 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.arrivals .wrapper .card .description .name {
+.products .wrapper .card .description .name {
     font-size: 32px;
     color: #000;
 }
 
-.arrivals .wrapper .card .description .explore {
+.products .wrapper .card .description .explore {
     font-size: 24px;
     color: #7f7f7f;
 }
 
-.arrivals .wrapper .card .description .arrow {
+.products .wrapper .card .description .arrow {
     width: 32px;
 }
 
@@ -249,6 +249,10 @@ button:hover {
     font-size: 26px;
     padding: 26px 50px;
     cursor: pointer;
+}
+
+.products.favourite .wrapper .card {
+    max-width: 800px;
 }
 
 
