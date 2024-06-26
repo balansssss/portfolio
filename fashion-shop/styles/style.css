@@ -249,6 +249,7 @@ button:hover {
     font-size: 26px;
     padding: 26px 50px;
     cursor: pointer;
+    border: none;
 }
 
 .products.favourite .wrapper .card {
@@ -398,6 +399,62 @@ button:hover {
 
 .footer .links-wrapper .links p:nth-of-type(1) .link {
     color: #d9d9d9;
+}
+
+.main .header .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.main .header .hamburger .line {
+    background-color: #242323;
+    width: 26px;
+    margin: 3px 0;
+    height: 2px;
+    transition: 0.4s;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(250px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main .header .mobile-navigation {
+    display: none;
+    background-color: #E0C340;
+    position: fixed;
+    height: 100dvh;
+    width: 230px;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
+    left: auto;
+    padding: 50px 30px;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.main .header .mobile-navigation .hamburger-close {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.main .header .mobile-navigation .navigation_link {
+    margin: 5px 0;
+}
+
+.main .header .mobile-navigation.active {
+    animation: slide 0.4s forwards;
 }
 
 @media screen and (max-width: 1750px) {
@@ -643,5 +700,271 @@ button:hover {
     }
 }
 
+@media screen and (max-width: 992px) {
 
+    .main .header .navigation {
+        display: none;
+    }
+
+    .main .header .hamburger {
+        display: block;
+    }
+
+    .main .header .mobile-navigation.active {
+        display: flex;
+    }
+
+    .main {
+        padding: 20px 0;
+    }
+
+    .main .logo {
+        width: 150px;
+    }
+
+    .main .slider {
+        margin-top: 30px;
+    }
+
+    .main .slider .wrapper .title,
+    .sale .wrapper .title {
+        font-size: 46px;
+    }
+
+    .main .slider .wrapper .info,
+    .main .slider .wrapper .button,
+    .sale .wrapper .btn,
+    .products .wrapper .card .description .name,
+    .sale .wrapper .info, 
+    .sale .wrapper .date,
+    .app .wrapper .info,
+    .join .info,
+    .footer .wrapper .info {
+        font-size: 16px;
+    }
+
+    .main .slider .wrapper .button,
+    .sale .wrapper .btn {
+        padding: 15px 25px;
+    }
+
+    .main .slider .image, 
+    .app .image {
+        max-width: 360px;
+    }
+
+    .banner .container {
+        height: 130px;
+    }
+
+    .banner .brand {
+        max-height: 40px;
+    }
+
+    .container .ctitle {
+        font-size: 26px;
+    }
+
+    .container .ctitle .background {
+        width: 100px;
+        top: 20px;
+    }
+
+    .products .wrapper {
+        margin-top: 30px;
+    }
+
+    .products .wrapper .card .description .explore {
+        font-size: 14px;
+    }
+
+    .products .wrapper .card .description .arrow {
+        width: 20px;
+    }
+
+    .products .wrapper .card .description {
+        margin-top: 10px;
+    }
+
+    .sale, .app, .join {
+        margin-top: 80px;
+    }
+
+    .sale .image {
+        width: 400px;
+    }
+
+    .sale .wrapper {
+        margin: 30px 0 30px 30px;
+    }
+
+    .app .wrapper .info {
+        max-width: 400px;
+    }
+
+    .app .wrapper .store {
+        width: 120px;
+    }
+
+    .join,
+    .footer {
+        padding: 80px 0;
+    }
+
+    .join .form input[type="email"] {
+        font-size: 16px;
+        padding: 15px 105px 15px 15px;
+    }
+
+    .join .form input[type="submit"] {
+        font-size: 16px;
+        padding: 5px 25px;
+    }
+
+    .join .form {
+        max-width: 360px;
+    }
+
+    .footer .wrapper .title {
+        font-size: 24px;
+    }
+
+    .footer .wrapper {
+        max-width: 350px;
+    }
+
+    .footer .wrapper .images .link .icon {
+        width: 28px;
+    }
+
+    .footer .links-wrapper .links .link {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .main .slider {
+        position: relative;
+    }
+
+    .main .slider .image {
+        max-width: 250px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        filter: opacity(0.5);
+    }
+    
+    .main .slider .wrapper {
+        z-index: 1;
+    }
+
+    .banner .brand:nth-of-type(2) {
+        display: none;
+    }
+
+    .products .wrapper .card {
+        max-width: 270px;
+    }
+
+    .products:not(.favourite) .wrapper .card:nth-of-type(2) {
+        margin-left: 20px!important;
+    }
+
+    .products .wrapper .card:nth-of-type(3) {
+        display: none;
+    }
+
+    .sale .container {
+        justify-content: start;
+    }
+
+    .sale .image {
+        width: 300px;
+        opacity: 0.8;
+        z-index: 0;
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+    }
+
+    .sale .wrapper {
+        z-index: 1;
+        margin: 30px 0;
+        max-width: 350px;
+    }
+
+    .products.products.favourite .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products .wrapper .card {
+        margin: 20px 0!important;
+    }
+
+    .products.favourite .wrapper .card {
+        max-width: 450px;
+    }
+
+    .app {
+        display: none;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .wrapper {
+        max-width: initial;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .footer .links-wrapper {
+        max-width: initial;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner .brand:nth-of-type(4) {
+        display: none;
+    }
+
+    .main .slider {
+        background: none;
+        padding: 50px 0 0;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+
+    .banner .brand {
+        max-height: 35px;
+    }
+
+    .banner .brand:nth-of-type(1) {
+        display: none;
+    }
+
+    .products .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products:not(.favourite) .wrapper .card:nth-of-type(2) {
+        margin-left: 0!important;
+    }
+
+    .footer .links-wrapper .links:nth-of-type(3) {
+        display: none;
+    }
+}
 
